@@ -31,7 +31,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## If 4 more hours
 
-- Add UI for filter and sort
+- Add UI for filter and sort and use TMDB Discover api
 - Config path aliases with craco.
 - Imporve movie details page
 
