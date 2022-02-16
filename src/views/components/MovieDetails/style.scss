@@ -1,0 +1,21 @@
+.movie-details {
+  max-width: 800px;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto 20px;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+      flex-flow: row;
+      align-items: flex-start;
+      &-img{
+          flex-basis: 230px;
+      }
+      &-content{
+          flex-basis: calc(100% - 230px);
+      }
+  }
+}
