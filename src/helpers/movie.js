@@ -13,16 +13,3 @@ export const getActorsNameList = (cast=[]) => {
         return arrAcc
     },[])
 }
-
-export const sortMovieListByReleaseDate = (list) => {
-    return list.sort((a, b) => {
-        if(new Date(a.release_date) > new Date(b.release_date)){
-            return -1
-        }
-        if(new Date(a.release_date) < new Date(b.release_date)){
-            return 1
-        }
-
-        return 0
-    })
-}

@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import MovieList from "../../../uilib/MovieList";
 import { useNavigate, useParams, useMatch } from "react-router-dom";
-import { sortMovieListByReleaseDate } from "../../../helpers/movie";
 
 function Home({ movies, getMovies }) {
   const navigate = useNavigate();
@@ -57,11 +56,7 @@ function Home({ movies, getMovies }) {
         </Snackbar>
       ) : (
         <MovieList
-          list={
-            filter === "upcoming"
-              ? sortMovieListByReleaseDate([...movies.data.results])
-              : movies.data.results
-          }
+          list={movies.data.results}
           page={movies.data.page}
           totalPages={movies.data.total_pages}
           onPageChange={handelPageChange}
